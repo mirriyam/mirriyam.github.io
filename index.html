@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light" data-mode="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maryam Ali | Software Engineer</title>
+<meta name="description" content="Portfolio of Maryam Ali: software engineer and photographer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="#home" aria-label="Maryam Ali">
+    <img class="logo-img lg-eng-light" src="assets/logo-eng-light.png" alt="">
+    <img class="logo-img lg-eng-dark" src="assets/logo-eng-dark.png" alt="">
+    <img class="logo-img lg-photo-light" src="assets/logo-photo-light.png" alt="">
+    <img class="logo-img lg-photo-dark" src="assets/logo-photo-dark.png" alt="">
+    <b data-i18n="logo_name">MARYAM ALI</b>
+  </a>
+  <nav aria-label="Main">
+    <ul class="nav-links">
+      <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+      <li><a href="#about-me" data-i18n="nav_about">About</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+      <li data-only="eng"><a href="#education" data-i18n="nav_edu">Education</a></li>
+      <li data-only="eng"><a href="#hobbies" data-i18n="nav_hobbies">Hobbies</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="controls">
+    <div class="mode" role="group" aria-label="Portfolio mode">
+      <button type="button" data-mode="eng" data-i18n="mode_eng">Engineering</button>
+      <button type="button" data-mode="photo" data-i18n="mode_photo">Photography</button>
+    </div>
+    <button id="lang-btn" class="pill" type="button">العربية</button>
+    <button id="theme-btn" class="round" type="button"><span aria-hidden="true">◐</span><span class="sr-only" data-i18n="theme_btn">Toggle theme</span></button>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="hero-sec">
+    <div class="wrap">
+      <div id="home" class="hero">
+        <div class="hero-text">
+          <p class="hi" data-i18n="hero_hi"></p>
+          <div class="hero-title">
+            <h1><span class="w1"><svg class="lines" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="150" cy="50" rx="146" ry="36" transform="rotate(-4 150 50)"/><ellipse cx="150" cy="50" rx="138" ry="28" transform="rotate(3 150 50)"/></svg><span data-i18n="hero_1"></span></span><span data-i18n="hero_2"></span></h1>
+          </div>
+          <p class="lead" data-i18n="hero_lead"></p>
+          <div class="actions">
+            <a class="btn" href="#projects" data-i18n="btn_browse"></a>
+            <a class="btn alt" href="#contact" data-i18n="btn_touch"></a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <div class="frame" id="ring">
+            <span class="back"></span>
+            <img id="avatar" src="assets/portrait.svg" alt="" width="330" height="412">
+          </div>
+          <div class="dots" id="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <ul class="tags"><li data-i18n="tag1"></li><li data-i18n="tag2"></li></ul>
+        </figure>
+      </div>
+      <div id="about-me" class="about-me">
+        <p class="eyebrow" data-i18n="eb_about"></p>
+        <h2 class="title" data-i18n="about_title">About Me</h2>
+        <div class="about-body">
+          <p class="muted" data-i18n="about_text"></p>
+          <p class="muted" data-i18n="location"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="eb_skills"></p>
+      <h2 class="title" data-i18n="skills_title">Skills</h2>
+      <div class="cols" id="skills-cols"></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="eb_projects"></p>
+      <h2 class="title" data-i18n="projects_title">Projects</h2>
+      <div class="tabs">
+        <div class="tab-list" id="projects-tabs" role="tablist" aria-orientation="vertical"></div>
+        <div class="tab-panels" id="projects-panels"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="alt">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="eb_exp"></p>
+      <h2 class="title" data-i18n="exp_title">Experience</h2>
+      <div class="tabs">
+        <div class="tab-list" id="exp-tabs" role="tablist" aria-orientation="vertical"></div>
+        <div class="tab-panels" id="exp-panels"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" data-only="eng">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="eb_edu"></p>
+      <h2 class="title" data-i18n="edu_title">Education</h2>
+      <div class="tabs">
+        <div class="tab-list" id="edu-tabs" role="tablist" aria-orientation="vertical"></div>
+        <div class="tab-panels" id="edu-panels"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies" class="alt" data-only="eng">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="eb_hobbies"></p>
+      <h2 class="title" data-i18n="hobbies_title">Hobbies</h2>
+      <ul class="rows" id="hobby-rows"></ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-wrap">
+      <div class="contact-info">
+        <p class="eyebrow" data-i18n="eb_contact"></p>
+        <h2 class="title" data-i18n="contact_title">Contact</h2>
+        <p class="muted" data-i18n="contact_sub"></p>
+        <ul class="links" id="links"></ul>
+      </div>
+      <form id="contact-form">
+        <label for="name" data-i18n="f_name">Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name">
+        <label for="email" data-i18n="f_email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <label for="message" data-i18n="f_message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button class="btn" type="submit" data-i18n="send">Send message</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p>© <span id="year"></span> <span data-i18n="footer"></span></p></div>
+</footer>
+</body>
+</html>
